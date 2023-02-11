@@ -8,7 +8,7 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
-let startTime;
+let startTime = null;
 let questionText = "";
 
 // Load and display question
@@ -106,7 +106,7 @@ const closeModal = () => {
 const start = () => {
   // If already started, do not start again
   // console.log(startTime);
-  // if (startTime) return;
+  if (startTime) return;
 
   let count = 3;
   countdownOverlay.style.display = "flex";
