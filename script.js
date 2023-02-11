@@ -85,6 +85,10 @@ const gameOver = () => {
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
+    <p>Your typing speed: ${(
+      (questionText.length / 5 / timeTaken) *
+      60
+    ).toFixed(2)}</p>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
