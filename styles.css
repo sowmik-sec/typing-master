@@ -142,18 +142,26 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
+  gap: 10px;
 }
+
+/* .col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+} */
 
 .card {
   width: 100%;
   height: 100%;
   padding: 50px;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   padding: 20px 30px;
   color: white;
   border-radius: 15px;
@@ -185,6 +193,12 @@ button {
   .box-container {
     padding: 0 20px;
     width: 100%;
+  }
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-around;
+    gap: 10px;
   }
   .card {
     flex-direction: column;
